@@ -6,6 +6,6 @@ one:
   price: 9.99
 
 two:
-  name: MyString
+  name: SecondString
   quantity: 1
   price: 9.99
