@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-2 price">$<%= @product.get('price') %></div>
+  <div class="col-md-7 name"><%= @product.get('name') %></div>
+  <div class="col-md-1 quantity"><%= @product.get('quantity') %></div>
+  <div class="col-md-2">
+    <button class="change-quantity" data-type="decrease">-</button>
+    <span class="to-order"> </span>
+    <button class="change-quantity" data-type="increase">+</button>
+  </div>
+</div>

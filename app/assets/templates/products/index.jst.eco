@@ -1,0 +1,16 @@
+<h2>You have <span id="total-items">0</span> items in your basket</h2>
+
+<div id="cart-items"></div>
+
+<hr>
+<div>Total: $<span id="total">0.00</span></div>
+<hr>
+
+<h1>Products</h1>
+
+<div class="row" style="font-size: 30px;">
+  <div class="col-md-2 price">Price</div>
+  <div class="col-md-7 name">Name</div>
+  <div class="col-md-1 quantity">Available</div>
+</div>
+<div id="products"></div>

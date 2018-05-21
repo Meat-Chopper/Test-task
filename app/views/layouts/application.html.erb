@@ -4,11 +4,9 @@
   <title>TestTask</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
@@ -16,7 +14,7 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Home', root_path %></li>
-        <li><%= link_to 'Orders', '#' %></li>
+        <li><%= link_to 'Orders', orders_path %></li>
       </ul>
     </nav>
   </div>
@@ -25,7 +23,9 @@
   <% flash.each do |message_type, message| %>
     <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
   <% end %>
-  <%= yield %>
+  <div id="container">
+    <%= yield %>
+  </div>
 </div>
 </body>
 </html>
