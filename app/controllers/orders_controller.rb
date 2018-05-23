@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
 
   # GET /orders.json
   def index
-    render json: Order.all
+    @orders = Order.all
   end
 
   # POST /orders.json
