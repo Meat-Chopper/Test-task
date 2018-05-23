@@ -10,6 +10,7 @@ gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
+gem 'backbone-nested-attributes'
 gem 'responders'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

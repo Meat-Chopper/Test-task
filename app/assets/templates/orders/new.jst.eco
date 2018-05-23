@@ -1,0 +1,33 @@
+<h1>Order</h1>
+<div>
+  <div id="errors"></div>
+  <div id="ordered-items">
+    <% for product in @order.get('order').models : %>
+      <div class="row">
+        <div class="col-md-10"><%= product.get('name') %></div>
+        <div class="col-md-2"><%= product.get('quantity') %> x $<%= product.get('price') %></div>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+  <div>
+    Total: $<%= @total %></span>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <label> Your name
+        <input type="text" id="customer_name" name="order[customer_name]">
+      </label>
+      <label> Your phone
+        <input type="tel" id="customer_phone" name="order[customer_phone]">
+      </label>
+    </div>
+    <div class="col-md-6">
+      <button id="create-order" class="btn btn-large btn-danger"
+              style="width: 80%;height: 90px;margin-top: 20px;text-align: center;">
+        Create order
+      </button>
+    </div>
+  </div>
+</div>

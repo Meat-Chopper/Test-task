@@ -1,3 +1,4 @@
+Product.destroy_all
 99.times do
   name = Faker::Lorem.words.join ' '
   quantity = Faker::Number.number 1

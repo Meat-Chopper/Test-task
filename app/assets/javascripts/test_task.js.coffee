@@ -6,12 +6,10 @@ window.TestTask =
   initialize: ->
     new TestTask.Routers.Products()
     new TestTask.Routers.Orders()
-    TestTask.items = new TestTask.Collections.Products
     TestTask.cartItems = new TestTask.Collections.Products
     TestTask.cartItems.on 'add', (item) ->
       item.set 'quantity', 1
       return
-    TestTask.cart = new TestTask.Views.ShoppingCart
     Backbone.history.start({pushState: true})
 
 

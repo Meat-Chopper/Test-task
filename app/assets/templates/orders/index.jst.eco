@@ -1,0 +1,30 @@
+<h1>Orders</h1>
+
+<table style="width: 100%;">
+  <thead>
+  <tr>
+    <th>Customer name</th>
+    <th>Customer phone</th>
+    <th>Order</th>
+    <th>Total</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% for order in @orders.models : %>
+    <tr>
+      <td><%= order.get('customer_name') %></td>
+      <td><%= order.get('customer_phone') %></td>
+      <td>
+        <ul>
+          <% total = 0 %>
+          <% for product in order.get('order').models : %>
+            <% total += product.get('total') %>
+            <li><%= product.get('name') %> - <%= product.get('quantity') %> pieces</li>
+          <% end %>
+        </ul>
+      </td>
+      <td><%= total.toFixed(2) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

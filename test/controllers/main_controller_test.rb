@@ -6,5 +6,7 @@ class MainControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     get orders_path
     assert_response :success
+    get orders_new_path
+    assert_response :success
   end
 end

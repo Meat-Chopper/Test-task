@@ -141,3 +141,12 @@ input {
 .navbar {
   display: block !important;
 }
+
+label {
+  display: block;
+}
+
+#errors {
+  color: #F00;
+  text-align: center;
+}

@@ -13,4 +13,5 @@ class TestTask.Views.ProductsIndex extends Backbone.View
       $('#products').append newItem.render().el
       return
     ), this
+    TestTask.cart = new TestTask.Views.ShoppingCart().render()
     this

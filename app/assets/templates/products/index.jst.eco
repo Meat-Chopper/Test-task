@@ -3,7 +3,10 @@
 <div id="cart-items"></div>
 
 <hr>
-<div>Total: $<span id="total">0.00</span></div>
+<div>
+  Total: $<span id="total">0.00</span>
+  <a href="orders/new" id="buy" class="btn btn-large btn-primary pull-right" style="display: none;">Buy</a>
+</div>
 <hr>
 
 <h1>Products</h1>

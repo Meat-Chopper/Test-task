@@ -1,4 +1,4 @@
-class TestTask.Models.Product extends Backbone.Model
+class TestTask.Models.Product extends Backbone.NestedAttributesModel
   total: ->
     total = @get('price') * @get('quantity')
     @set 'total', total

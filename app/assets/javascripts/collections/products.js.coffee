@@ -7,4 +7,4 @@ class TestTask.Collections.Products extends Backbone.Collection
     @each (model) ->
       total += model.total()
       return
-    total
+    total.toFixed(2)

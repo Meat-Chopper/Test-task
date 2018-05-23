@@ -19,6 +19,7 @@ class TestTask.Views.ProductsItem extends Backbone.View
     if type == 'decrease' && model?
       if model.get('quantity') == 1
         TestTask.cartItems.remove model
+        # TODO: delete the model from memory?
       else
         model.quantity type
       @model.quantity 'increase'

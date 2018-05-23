@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_19_095006) do
+ActiveRecord::Schema.define(version: 2018_05_19_165027) do
+
+  create_table "orders", force: :cascade do |t|
+    t.string "customer_name", null: false
+    t.string "customer_phone", null: false
+    t.json "order", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.integer "quantity"
-    t.decimal "price"
+    t.string "name", null: false
+    t.integer "quantity", null: false
+    t.decimal "price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_products_on_name", unique: true
