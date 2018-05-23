@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'backbone-on-rails'
 gem 'backbone-nested-attributes'
+gem 'js_cookie_rails'
 gem 'responders'
 gem 'pg'
 # Use sqlite3 as the database for Active Record

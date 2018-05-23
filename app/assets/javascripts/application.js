@@ -18,6 +18,7 @@
 //= require underscore
 //= require backbone
 //= require backbone-nested-attributes/all
+//= require js.cookie
 //= require test_task
 //= require_tree ../templates
 //= require_tree ./models

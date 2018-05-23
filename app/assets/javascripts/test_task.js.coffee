@@ -7,6 +7,7 @@ window.TestTask =
     new TestTask.Routers.Products()
     new TestTask.Routers.Orders()
     TestTask.cartItems = new TestTask.Collections.Products
+    TestTask.cartItems.set JSON.parse(Cookies.get('order')) if Cookies.get('order')
     TestTask.cartItems.on 'add', (item) ->
       item.set 'quantity', 1
       return

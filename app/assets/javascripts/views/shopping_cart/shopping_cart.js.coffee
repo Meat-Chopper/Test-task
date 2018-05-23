@@ -1,9 +1,9 @@
 class TestTask.Views.ShoppingCart extends Backbone.View
-  # TODO: save to and load from the session
   initialize: ->
     @collection = TestTask.cartItems
     @emptyCart()
     @collection.on 'add remove change:quantity', ((item) ->
+      Cookies.set 'order', JSON.stringify(@collection.toJSON())
       @rerender()
     ), this
     @rerender()
